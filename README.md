@@ -42,4 +42,11 @@ Start the development server:
 $ npm run dev
 ```
 
+## Set up your .env file
+
+Before running the app, you need to modify your .env file to include your api key from RAWG.
+
+```bash
+VITE_API_KEY=
+```
 Open your browser and navigate to http://localhost:5173 to see the app in action.
