@@ -10,7 +10,7 @@ interface GameCardProps {
 
 export const GameCard: React.FC<GameCardProps> = ({ game }) => {
   return (
-    <Card.Root borderRadius={10} overflow="hidden">
+    <Card.Root borderRadius={10} overflow="hidden" width="300px">
       <Image src={getCroppedImageUrl(game.background_image)} />
       <Card.Body>
         <Heading fontSize="2xl">{game.name}</Heading>
