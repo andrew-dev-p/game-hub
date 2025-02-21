@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **Rawg-like Game Hub** app built with **React** and **TypeScript** that allows users to discover, track, and explore games from various platforms.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Game Discovery**: Explore a vast collection of games from multiple platforms like PC, PlayStation, Xbox, and more.
+  
+- **Platform Filtering**: Filter games based on your preferred platform, whether it’s PC, PlayStation, Xbox, or mobile.
 
-## Expanding the ESLint configuration
+- **Search and Sort**: Easily search and sort games by genre, release date, rating etc.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Responsive Design**: Fully responsive and optimized for different screen sizes and devices.
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **React**: A JavaScript library for building user interfaces, ensuring fast and dynamic rendering of content.
+
+- **TypeScript**: A superset of JavaScript that provides static types to catch errors early and enhance code maintainability.
+
+- **Chakra UI**: A simple, modular, and accessible component library for building React applications with ease.
+
+- **React Icons**: A collection of customizable icons to represent different platforms and actions in the app.
+
+- **Axios**: A promise-based HTTP client for the browser and Node.js, used to fetch game data from the API.
+
+- **Vite**: A next-generation build tool that offers fast development and efficient bundling.
+
+## Installation
+
+This project uses **npm** as the package manager.
+
+```bash
+$ npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Running the app
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Start the development server:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+$ npm run dev
 ```
+
+Open your browser and navigate to http://localhost:5173 to see the app in action.
