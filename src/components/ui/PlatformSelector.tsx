@@ -1,5 +1,5 @@
 import { Button } from "@chakra-ui/react";
-import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from "./menu";
+import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from "./Menu";
 import usePlatforms from "@/hooks/usePlatforms";
 import { Platform } from "@/hooks/useGames";
 

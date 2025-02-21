@@ -1,5 +1,5 @@
 import { Card } from "@chakra-ui/react";
-import { Skeleton, SkeletonText } from "./skeleton";
+import { Skeleton, SkeletonText } from "./Skeleton";
 
 export const GameCardSkeleton = () => {
   return (
