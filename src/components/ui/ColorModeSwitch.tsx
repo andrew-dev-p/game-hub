@@ -6,7 +6,7 @@ export const ColorModeSwitch = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <HStack>
+    <HStack flexShrink={0}>
       <Switch checked={colorMode === "dark"} onChange={toggleColorMode} />
       <Text>Dark Mode</Text>
     </HStack>

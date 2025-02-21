@@ -20,7 +20,9 @@ export const PlatformSelector: React.FC<PlatformSelectorProps> = ({
     <MenuRoot>
       <MenuTrigger asChild>
         <Button variant="outline" size="sm">
-          {selectedPlatform?.name || "Select a platform"}
+          {selectedPlatform
+            ? `Platform: ${selectedPlatform.name}`
+            : "Select a platform"}
         </Button>
       </MenuTrigger>
       <MenuContent>
