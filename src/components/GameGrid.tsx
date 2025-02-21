@@ -18,7 +18,7 @@ export const GameGrid = () => {
           lg: 3,
           xl: 4,
         }}
-        gap={10}
+        gap={3}
       >
         {games.map((game) => (
           <GameCardContainer>
