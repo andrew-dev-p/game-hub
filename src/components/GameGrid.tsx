@@ -24,7 +24,7 @@ export const GameGrid: React.FC<GameGridProps> = ({ gameQuery }) => {
           lg: 3,
           xl: 4,
         }}
-        gap={3}
+        gap={5}
       >
         {games.map((game) => (
           <GameCardContainer key={game.id}>
