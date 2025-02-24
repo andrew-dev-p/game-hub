@@ -12,11 +12,17 @@ This is a **Rawg-like Game Hub** app built with **React** and **TypeScript** tha
 
 - **Responsive Design**: Fully responsive and optimized for different screen sizes and devices.
 
+- **Infinite Scroll**: Implements continuous scrolling to dynamically load more games as the user scrolls down, improving user experience and performance.
+
+- **Dark Mode**: A visually comfortable dark theme that reduces eye strain and enhances the experience, especially in low-light environments.
+
 ## Technologies Used
 
 - **React**: A JavaScript library for building user interfaces, ensuring fast and dynamic rendering of content.
 
 - **TypeScript**: A superset of JavaScript that provides static types to catch errors early and enhance code maintainability.
+
+- **React Query**: A powerful data-fetching library that simplifies state management, caching, and background updates for API requests.
 
 - **Chakra UI**: A simple, modular, and accessible component library for building React applications with ease.
 
