@@ -1,5 +1,8 @@
+import { GameAttributes } from "@/components/GameAttributes";
+import { CriticScore } from "@/components/ui/CriticScore";
+import { DefinitionItem } from "@/components/ui/DefinitionItem";
 import useGame from "@/hooks/useGame";
-import { Heading, Spinner, Text } from "@chakra-ui/react";
+import { Heading, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 
 export const GameDetailsPage = () => {
@@ -15,6 +18,7 @@ export const GameDetailsPage = () => {
     <>
       <Heading>{game.name}</Heading>
       <Text>{game.description_raw}</Text>
+      <GameAttributes game={game} />
     </>
   );
 };
