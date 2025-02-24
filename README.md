@@ -26,6 +26,8 @@ This is a **Rawg-like Game Hub** app built with **React** and **TypeScript** tha
 
 - **React Query**: A powerful data-fetching library that simplifies state management, caching, and background updates for API requests.
 
+- **Zustand**: A lightweight state management library that provides a simple and scalable way to manage global state without the need for context providers.
+
 - **Chakra UI**: A simple, modular, and accessible component library for building React applications with ease.
 
 - **React Icons**: A collection of customizable icons to represent different platforms and actions in the app.
