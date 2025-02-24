@@ -22,13 +22,13 @@ This is a **Rawg-like Game Hub** app built with **React** and **TypeScript** tha
 
 - **TypeScript**: A superset of JavaScript that provides static types to catch errors early and enhance code maintainability.
 
+- **Axios**: A promise-based HTTP client for the browser and Node.js, used to fetch game data from the API.
+
 - **React Query**: A powerful data-fetching library that simplifies state management, caching, and background updates for API requests.
 
 - **Chakra UI**: A simple, modular, and accessible component library for building React applications with ease.
 
 - **React Icons**: A collection of customizable icons to represent different platforms and actions in the app.
-
-- **Axios**: A promise-based HTTP client for the browser and Node.js, used to fetch game data from the API.
 
 - **Vite**: A next-generation build tool that offers fast development and efficient bundling.
 
