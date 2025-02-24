@@ -18,7 +18,7 @@ export const GenreList: React.FC<GenreListProps> = ({
 
   return (
     <List.Root>
-      {genres.map((genre) => (
+      {genres?.results.map((genre) => (
         <List.Item key={genre.id} paddingY="5px" fontSize="lg" listStyle="none">
           <HStack>
             <Image

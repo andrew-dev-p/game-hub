@@ -13,7 +13,7 @@ interface GameGridProps {
 export const GameGrid: React.FC<GameGridProps> = ({ gameQuery }) => {
   const { data: games, error, isLoading } = useGames(gameQuery);
 
-  if (error) return <Text>{error}</Text>;
+  if (error) return <Text>{error.message}</Text>;
 
   return (
     <SimpleGrid
@@ -26,7 +26,7 @@ export const GameGrid: React.FC<GameGridProps> = ({ gameQuery }) => {
       }}
       gap={5}
     >
-      {games.map((game) => (
+      {games?.results.map((game) => (
         <GameCardContainer key={game.id}>
           <GameCard game={game} />
         </GameCardContainer>
