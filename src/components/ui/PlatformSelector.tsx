@@ -3,15 +3,18 @@ import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from "./Menu";
 import usePlatforms, { Platform } from "@/hooks/usePlatforms";
 
 interface PlatformSelectorProps {
-  selectedPlatform: Platform | null;
+  selectedPlatformId?: number;
   onSelectPlatform: (platform: Platform) => void;
 }
 
 export const PlatformSelector: React.FC<PlatformSelectorProps> = ({
-  selectedPlatform,
+  selectedPlatformId,
   onSelectPlatform,
 }) => {
   const { data: platforms, error } = usePlatforms();
+  const selectedPlatform = platforms?.results.find(
+    (p) => p.id === selectedPlatformId
+  );
 
   if (error) return null;
 
