@@ -1,42 +1,61 @@
 import useGames from "@/hooks/useGames";
-import { SimpleGrid, Text } from "@chakra-ui/react";
+import { SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 import { GameCard } from "./ui/GameCard";
 import { GameCardSkeleton } from "./ui/GameCardSkeleton";
 import { GameCardContainer } from "./GameCardContainer";
 import React from "react";
 import { GameQuery } from "@/App";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 interface GameGridProps {
   gameQuery: GameQuery;
 }
 
 export const GameGrid: React.FC<GameGridProps> = ({ gameQuery }) => {
-  const { data: games, error, isLoading } = useGames(gameQuery);
+  const {
+    data: games,
+    error,
+    isLoading,
+    fetchNextPage,
+    hasNextPage,
+  } = useGames(gameQuery);
+
+  const fetchedDataCount =
+    games?.pages.reduce((total, page) => total + page.results.length, 0) || 0;
 
   if (error) return <Text>{error.message}</Text>;
 
   return (
-    <SimpleGrid
-      padding="10px"
-      columns={{
-        sm: 1,
-        md: 2,
-        lg: 3,
-        xl: 4,
-      }}
-      gap={5}
+    <InfiniteScroll
+      dataLength={fetchedDataCount}
+      hasMore={hasNextPage}
+      next={fetchNextPage}
+      loader={<Spinner />}
     >
-      {games?.results.map((game) => (
-        <GameCardContainer key={game.id}>
-          <GameCard game={game} />
-        </GameCardContainer>
-      ))}
-      {isLoading &&
-        Array.from({ length: 6 }).map((_, index) => (
-          <GameCardContainer key={index}>
-            <GameCardSkeleton />
-          </GameCardContainer>
-        ))}
-    </SimpleGrid>
+      <SimpleGrid
+        padding="10px"
+        columns={{
+          sm: 1,
+          md: 2,
+          lg: 3,
+          xl: 4,
+        }}
+        gap={5}
+      >
+        {games?.pages.map((page) =>
+          page.results.map((game) => (
+            <GameCardContainer key={game.id}>
+              <GameCard game={game} />
+            </GameCardContainer>
+          ))
+        )}
+        {isLoading &&
+          Array.from({ length: 6 }).map((_, index) => (
+            <GameCardContainer key={index}>
+              <GameCardSkeleton />
+            </GameCardContainer>
+          ))}
+      </SimpleGrid>
+    </InfiniteScroll>
   );
 };
