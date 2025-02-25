@@ -1,8 +1,8 @@
 import { GameAttributes } from "@/components/GameAttributes";
-import { CriticScore } from "@/components/ui/CriticScore";
-import { DefinitionItem } from "@/components/ui/DefinitionItem";
+import { GameScreenshots } from "@/components/ui/GameScreenshots";
+import { GameTrailer } from "@/components/ui/GameTrailer";
 import useGame from "@/hooks/useGame";
-import { Heading, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 
 export const GameDetailsPage = () => {
@@ -15,10 +15,16 @@ export const GameDetailsPage = () => {
   if (error || !game) return null;
 
   return (
-    <>
-      <Heading>{game.name}</Heading>
-      <Text>{game.description_raw}</Text>
-      <GameAttributes game={game} />
-    </>
+    <SimpleGrid columns={{ base: 1, md: 2 }} gap={5}>
+      <Box>
+        <Heading>{game.name}</Heading>
+        <Text>{game.description_raw}</Text>
+        <GameAttributes game={game} />
+      </Box>
+      <Box>
+        <GameTrailer gameId={game.id} />
+        <GameScreenshots gameId={game.id} />
+      </Box>
+    </SimpleGrid>
   );
 };
