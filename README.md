@@ -5,6 +5,8 @@ This is a **Rawg-like Game Hub** app built with **React** and **TypeScript** tha
 ## Features
 
 - **Game Discovery**: Explore a vast collection of games from multiple platforms like PC, PlayStation, Xbox, and more.
+
+- **Game Details Page**: Each game has a dedicated details page displaying **trailers, screenshots, descriptions, genres, ratings, and platform availability** for a more immersive browsing experience.
   
 - **Platform Filtering**: Filter games based on your preferred platform, whether it’s PC, PlayStation, Xbox, or mobile.
 
@@ -27,6 +29,8 @@ This is a **Rawg-like Game Hub** app built with **React** and **TypeScript** tha
 - **React Query**: A powerful data-fetching library that simplifies state management, caching, and background updates for API requests.
 
 - **Zustand**: A lightweight state management library that provides a simple and scalable way to manage global state without the need for context providers.
+
+- **React Router**: A client-side routing library for managing navigation and rendering different pages without reloading, ensuring a smooth and fast user experience.
 
 - **Chakra UI**: A simple, modular, and accessible component library for building React applications with ease.
 
